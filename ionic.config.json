@@ -1,0 +1,8 @@
+{
+  "name": "zidapp",
+  "app_id": "e8024466",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Nouveau Restaurant
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="danger" >Annuler</span>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="newRestaurant" (ngSubmit)="saveRestaurant()">
+    <ion-list>
+      <ion-item>
+        <ion-label>Nom</ion-label>
+        <ion-input type="text" formControlName="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Catégorie</ion-label>
+        <ion-select  formControlName="categorie">
+          <ion-option value="Cancer">Cancer</ion-option>
+          <ion-option value="Sain">Sain</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Adresse</ion-label>
+        <ion-input type="text" formControlName="address"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <button ion-button type="submit" block>Ajouter</button>
+  </form>
+</ion-content>

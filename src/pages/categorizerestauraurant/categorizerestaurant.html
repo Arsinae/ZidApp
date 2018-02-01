@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Restaurant List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  {{a}}
+  <ion-card *ngFor="let item of categorie; let i = index" (press)="deleteCategorie(item.name)"
+            (click)="CategorizeList(item.name)">
+    <img src="assets/img/{{i%2}}.png"/>
+    <div class="card-title">{{item.name}}</div>
+    <div class="card-subtitle">{{item.count}} Restaurants</div>
+  </ion-card>
+
+  <ion-fab bottom right>
+    <button ion-fab color="primary" (click)="addCategorie()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>
